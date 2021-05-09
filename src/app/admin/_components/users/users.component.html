@@ -1,0 +1,35 @@
+<div class="user-container padding">
+    <table class="full-width table">
+        <tr class="header-row">
+            <th class="padding">
+                <input type="checkbox">
+            </th>
+            <th *ngFor="let column of tableColumns" class="padding">
+                {{column}}
+            </th>
+        </tr>
+        <tr *ngFor="let member of members">
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>
+                {{member.name}}
+            </td>
+            <td>
+                {{member.email}}
+            </td>
+            <td>
+                {{member.role}}
+            </td>
+            <td class="display-flex actions">
+                <button mat-icon-button color="accent">
+                    <mat-icon>edit</mat-icon>
+                </button>
+
+                <button mat-icon-button color="primary">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
